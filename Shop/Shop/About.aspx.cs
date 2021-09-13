@@ -24,7 +24,7 @@ namespace Shop
                 Master.linkLogin.Visible = false;
                 Master.linklogout.Visible = true;
                 Master.linkReg.Visible = false;
-                Master.LabUser.Text = user;
+                Master.user_profile.Text = "Hello " + user;
             }
             
         }

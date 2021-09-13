@@ -14,8 +14,7 @@
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
-    <link rel="stylesheet" href="style.css">
+    <link href="Content/style.css" rel="stylesheet" />
 </head>
 <body>
     <form runat="server">
@@ -53,12 +52,14 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li><asp:LinkButton ID="lb_reg" runat="server" OnClick="lb_reg_Click">Customer Registration</asp:LinkButton></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>                     
+                    </ul>
+                    <div class="nav navbar-nav navbar-right">
+                     <li><asp:LinkButton ID="lb_reg" runat="server" OnClick="lb_reg_Click">Customer Registration</asp:LinkButton></li>
                         <li><asp:LinkButton ID="lb_login" runat="server" OnClick="lb_login_Click">Login</asp:LinkButton></li>
                         <li><asp:LinkButton ID="lb_logout" Visible="false" runat="server" OnClick="lb_logout_Click">Log out</asp:LinkButton></li>
-                        <li><asp:Label ID="lbl_login" runat="server" Text=""></asp:Label></li>
-                    </ul>
+                        <li><asp:LinkButton ID="lb_user" runat="server" OnClick="lb_user_Click" ></asp:LinkButton></li>
+                </div>
                 </div>
             </div>
         </div>

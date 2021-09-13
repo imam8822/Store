@@ -11,7 +11,7 @@
                     <asp:TextBox ID="tb_email" runat="server" width="80%" CssClass="form-control"  placeholder="example@gmail.com"></asp:TextBox><asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Invalid email" ControlToValidate="tb_email"  Display="Dynamic" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 </div>
                 <div class="form-group">
-                    <label class="text-dark">Password</label>
+                    <label class="text-dark">Password</label><span class="mandatory">*</span>
                     <asp:TextBox ID="tb_pass" runat="server" TextMode="Password" placeholder="Password" CssClass="form-control" width="80%"></asp:TextBox>
                 </div>
                 <asp:Button ID="btn_login" runat="server" Text="Login" CssClass="btn btn-primary" OnClick="btn_login_Click" />
@@ -19,7 +19,7 @@
                     <asp:LinkButton ID="lk_newUser" runat="server" CssClass="btn btn-link" OnClick="lk_newUser_Click">New User?</asp:LinkButton>
                 </div>
                 <div class="form-group">
-                    <asp:Label ID="lbl_log_error" runat="server"></asp:Label>
+                    <asp:Label ID="lbl_log_error" runat="server" ForeColor="Red"></asp:Label>
                 </div>
             </form>
         </div>

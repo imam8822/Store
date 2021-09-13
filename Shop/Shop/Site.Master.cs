@@ -13,13 +13,6 @@ namespace Shop
         {
 
         }
-        public Label LabUser
-        {
-            get
-            {
-                return this.lbl_login;
-            }
-        }
         public LinkButton linkReg
         {
             get
@@ -41,17 +34,24 @@ namespace Shop
                 return this.lb_logout;
             }
         }
+        public LinkButton user_profile
+        {
+            get
+            {
+                return this.lb_user;
+            }
 
+        }
         protected void lb_reg_Click(object sender, EventArgs e)
         {
-           // Response.Redirect("Customer.aspx");
-            Server.Transfer("Customer.aspx");
+              Response.Redirect("Customer.aspx");
+            //Server.Transfer("Customer.aspx");
         }
 
         protected void lb_login_Click(object sender, EventArgs e)
         {
-            //Response.Redirect("Login.aspx");
-            Server.Transfer("Login.aspx");
+            Response.Redirect("Login.aspx");
+            //Server.Transfer("Login.aspx");
 
         }
 
@@ -61,6 +61,11 @@ namespace Shop
             
             Session.Abandon();
             Response.Redirect("Login.aspx");      
+        }
+
+        protected void lb_user_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UserProfile.aspx");
         }
     }
 }

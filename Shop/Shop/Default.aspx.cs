@@ -13,7 +13,14 @@ namespace Shop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                LoadData();
+            }
+        }
 
+        private void LoadData()
+        {
             if (Session["UserName"] != null)
             {
                 string conString = ConfigurationManager.ConnectionStrings["StoreConnectionDB"].ConnectionString;
@@ -26,7 +33,7 @@ namespace Shop
                 Master.linkLogin.Visible = false;
                 Master.linklogout.Visible = true;
                 Master.linkReg.Visible = false;
-                Master.LabUser.Text = "imam";
+                Master.user_profile.Text = "Hello " +  user;
             }
         }
     }
